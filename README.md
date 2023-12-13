@@ -9,13 +9,13 @@ Pseudocode: Create a calculator contain functions for all of the basic math oper
 
 2 - Create a function operator() to take the operator and two numbers []
 
-3 - Create a calculator display using HTML and CSS []
-    numbers 0-9 []
-    operators (add, subtract, multuply, divide) []
-    equal []
-    clean button []
-    point []
-    backspace []
+3 - Create a calculator display using HTML and CSS [x]
+    numbers 0-9 [x]
+    operators (add, subtract, multuply, divide) [x]
+    equal [x]
+    clean button [x]
+    point [x]
+    backspace [x]
 
 4 - Create a place to store the value passed in by the user
 
