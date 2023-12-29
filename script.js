@@ -9,17 +9,18 @@ const eight = document.querySelector('#eight')
 const nine = document.querySelector('#nine')
 const scream = document.querySelector('#scream')
 
-one.addEventListener('click', getFistNumber)
-two.addEventListener('click', getFistNumber)
-
-function getFistNumber(number) {
-    calculator(number.target.innerText)
+function add(a,b) {
+    return a + b
 }
 
-function calculator(firstNumber) {
-
-    let firstNumberSelected = firstNumber
-    scream.innerText = firstNumberSelected
+function subtract(a,b) {
+    return a - b
 }
 
+function multiply(a,b) {
+    return a * b
+}
 
+function divide(a,b) {
+    return a / b
+}
