@@ -24,3 +24,8 @@ function multiply(a,b) {
 function divide(a,b) {
     return a / b
 }
+
+let firstNumber = 1
+let secondNumber = 2
+let operator = x
+
