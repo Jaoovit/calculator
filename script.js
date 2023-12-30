@@ -25,7 +25,17 @@ function divide(a,b) {
     return a / b
 }
 
-let firstNumber = 1
-let secondNumber = 2
-let operator = x
+let firstNumber = 0
+let secondNumber = 0
+let operator = {
+    add: '+',
+    subtract: '-',
+    multiply: '*',
+    divide: '/',
+}
 
+function operate() {
+    return add(firstNumber,secondNumber)
+}
+
+console.log(operate())
