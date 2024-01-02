@@ -8,6 +8,7 @@ const seven = document.querySelector('#seven')
 const eight = document.querySelector('#eight')
 const nine = document.querySelector('#nine')
 const scream = document.querySelector('#scream')
+const equal = document.querySelector('#equal')
 
 function add(a,b) {
     return a + b
@@ -25,8 +26,14 @@ function divide(a,b) {
     return a / b
 }
 
-let firstNumber = 0
-let secondNumber = 0
+function getFirstNumber() {
+    return one.innerText + two.innerText
+}
+
+console.log(getFirstNumber())
+
+let firstNumber = ''
+let secondNumber = ''
 let operator = {
     add: '+',
     subtract: '-',
@@ -35,8 +42,6 @@ let operator = {
 }
 
 function operate(operator, a, b) {
-    a = Number(a)
-    b = Number(b)
     switch (operator) {
         case '+':
             return add(a,b)
@@ -52,4 +57,4 @@ function operate(operator, a, b) {
     }
 }
 
-console.log(operate(operator.add, firstNumber, secondNumber))
+console.log(operate(operator.add, Number(firstNumber), Number(secondNumber)))
