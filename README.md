@@ -2,12 +2,12 @@
 
 Pseudocode: Create a calculator contain functions for all of the basic math operators (add, subtract, multuply, divide).
 
-1 - Create 3 valiable to display a calculator system []
-    first number []
-    operator []
-    second number []
+1 - Create 3 valiable to display a calculator system [x]
+    first number [x]
+    operator [x]
+    second number [x]
 
-2 - Create a function operator() to take the operator and two numbers []
+2 - Create a function operator() to take the operator and two numbers [x]
 
 3 - Create a calculator display using HTML and CSS [x]
     numbers 0-9 [x]

@@ -7,8 +7,18 @@ const six = document.querySelector('#six')
 const seven = document.querySelector('#seven')
 const eight = document.querySelector('#eight')
 const nine = document.querySelector('#nine')
+
 const scream = document.querySelector('#scream')
+
+const clear = document.querySelector('#clear')
+const del = document.querySelector('#delete')
 const equal = document.querySelector('#equal')
+
+
+const sum = document.querySelector('#add')
+const subt = document.querySelector('#subtract')
+const mult = document.querySelector('#multiply')
+const div = document.querySelector('#divide')
 
 function add(a,b) {
     return a + b
@@ -32,8 +42,8 @@ function getFirstNumber() {
 
 console.log(getFirstNumber())
 
-let firstNumber = ''
-let secondNumber = ''
+let firstNumber = '15'
+let secondNumber = '15'
 let operator = {
     add: '+',
     subtract: '-',
@@ -58,3 +68,8 @@ function operate(operator, a, b) {
 }
 
 console.log(operate(operator.add, Number(firstNumber), Number(secondNumber)))
+
+
+    equal.addEventListener('click', function onClick() {
+        scream.innerText = operate(operator.add, Number(firstNumber), Number(secondNumber));
+    })
