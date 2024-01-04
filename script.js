@@ -36,20 +36,30 @@ function divide(a,b) {
     return a / b
 }
 
-function getFirstNumber() {
-    return one.innerText + two.innerText
-}
+///
 
-console.log(getFirstNumber())
+let firstNumber = '2'
+let secondNumber = '1'
+let operator = ''
 
-let firstNumber = '15'
-let secondNumber = '15'
-let operator = {
-    add: '+',
-    subtract: '-',
-    multiply: '*',
-    divide: '/',
-}
+sum.addEventListener('click', function onClick() {
+    scream.innerText = '+'
+    operator = '+'
+})
+subt.addEventListener('click', function onClick() {
+    scream.innerText = '-'
+    operator = '-'
+})
+mult.addEventListener('click', function onClick() {
+    scream.innerText = '*'
+    operator = '*'
+})
+div.addEventListener('click', function onClick() {
+    scream.innerText = '/'
+    operator = '/'
+})
+
+///
 
 function operate(operator, a, b) {
     switch (operator) {
@@ -67,9 +77,9 @@ function operate(operator, a, b) {
     }
 }
 
-console.log(operate(operator.add, Number(firstNumber), Number(secondNumber)))
+console.log(operate(operator.multiply, Number(firstNumber), Number(secondNumber)))
 
 
     equal.addEventListener('click', function onClick() {
-        scream.innerText = operate(operator.add, Number(firstNumber), Number(secondNumber));
+        scream.innerText = operate(operator, Number(firstNumber), Number(secondNumber));
     })
