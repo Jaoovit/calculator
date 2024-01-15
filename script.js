@@ -166,6 +166,13 @@ function operate(operator, a, b) {
     }
 }
 
+clear.addEventListener('click', function onClick() {
+    scream.innerText = ''
+    firstNumber = ''
+    secondNumber = ''
+    operator = ''
+})
+
 equal.addEventListener('click', function onClick() {
     scream.innerText = operate(operator, Number(firstNumber), Number(secondNumber));
     console.log(firstNumber,secondNumber,operator)

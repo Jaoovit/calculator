@@ -51,7 +51,7 @@ button {
 }
 
 .clear {
-    background-color:lightskyblue;
+    background-color: lightcoral;
     width: 95px;
     height: 30px;
     border: 1px solid black;
@@ -59,7 +59,7 @@ button {
 }
 
 .delete {
-    background-color:lightcoral;
+    background-color:lightskyblue;
     width: 95px;
     height: 30px;
     border: 1px solid black;
