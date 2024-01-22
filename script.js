@@ -130,14 +130,25 @@ dot.addEventListener('click', function onClick() {
 })
 
 let operator = ''
+let result = ''
 
 sum.addEventListener('click', function onClick() {
     scream.innerText += '+'
     operator = '+'
+    if (operator == '+' || '-' || '*' || '/') {
+        result = add(Number(firstNumber), Number(secondNumber));
+        firstNumber = result;
+        secondNumber = ''
+    }
 })
 subt.addEventListener('click', function onClick() {
     scream.innerText += '-'
     operator = '-'
+    if (operator == '+' || '-' || '*' || '/') {
+        result = subtract(Number(firstNumber), Number(secondNumber));
+        firstNumber = result;
+        secondNumber = ''
+    }
 })
 mult.addEventListener('click', function onClick() {
     scream.innerText += '*'
@@ -174,8 +185,9 @@ clear.addEventListener('click', function onClick() {
 })
 
 equal.addEventListener('click', function onClick() {
+    result = operate(operator, Number(firstNumber), Number(secondNumber));
     scream.innerText = operate(operator, Number(firstNumber), Number(secondNumber));
-    console.log(firstNumber,secondNumber,operator);
+    console.log(firstNumber,secondNumber,operator, result);
     firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
     secondNumber = ''
     operator = ''
