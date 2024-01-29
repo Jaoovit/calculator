@@ -133,8 +133,6 @@ dot.addEventListener('click', function onClick() {
 let operator = '+'
 let result = ''
 
-///
-
 sum.addEventListener('click', function onClick() {
     scream.innerText += '+'
     firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
@@ -147,9 +145,6 @@ subt.addEventListener('click', function onClick() {
     operator = '-'
     secondNumber = ''
 })
-
-///
-
 mult.addEventListener('click', function onClick() {
     scream.innerText += '*'
     firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
@@ -185,7 +180,6 @@ clear.addEventListener('click', function onClick() {
     scream.innerText = ''
     firstNumber = ''
     secondNumber = ''
-    operator = ''
 })
 
 equal.addEventListener('click', function onClick() {
