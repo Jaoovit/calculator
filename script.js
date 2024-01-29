@@ -113,6 +113,7 @@ nine.addEventListener('click', function onClick() {
     
 })
 
+
 zero.addEventListener('click', function onClick() {
     scream.innerText += '0'
     if (operator == '') {
@@ -129,34 +130,37 @@ dot.addEventListener('click', function onClick() {
     
 })
 
-let operator = ''
+let operator = '+'
 let result = ''
+
+///
 
 sum.addEventListener('click', function onClick() {
     scream.innerText += '+'
+    firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
     operator = '+'
-    if (operator == '+' || '-' || '*' || '/') {
-        result = add(Number(firstNumber), Number(secondNumber));
-        firstNumber = result;
-        secondNumber = ''
-    }
+    secondNumber = ''
 })
 subt.addEventListener('click', function onClick() {
     scream.innerText += '-'
+    firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
     operator = '-'
-    if (operator == '+' || '-' || '*' || '/') {
-        result = subtract(Number(firstNumber), Number(secondNumber));
-        firstNumber = result;
-        secondNumber = ''
-    }
+    secondNumber = ''
 })
+
+///
+
 mult.addEventListener('click', function onClick() {
     scream.innerText += '*'
+    firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
     operator = '*'
+    secondNumber = ''
 })
 div.addEventListener('click', function onClick() {
     scream.innerText += '/'
+    firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
     operator = '/'
+    secondNumber = ''
 })
 
 function operate(operator, a, b) {
@@ -186,9 +190,8 @@ clear.addEventListener('click', function onClick() {
 
 equal.addEventListener('click', function onClick() {
     result = operate(operator, Number(firstNumber), Number(secondNumber));
-    scream.innerText = operate(operator, Number(firstNumber), Number(secondNumber));
+    scream.innerText = result;
     console.log(firstNumber,secondNumber,operator, result);
-    firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
+    firstNumber = result;
     secondNumber = ''
-    operator = ''
 })
