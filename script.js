@@ -185,7 +185,8 @@ clear.addEventListener('click', function onClick() {
 equal.addEventListener('click', function onClick() {
     result = operate(operator, Number(firstNumber), Number(secondNumber));
     scream.innerText = result;
-    console.log(firstNumber,secondNumber,operator, result);
     firstNumber = result;
+    console.log(firstNumber,secondNumber,operator, result);
     secondNumber = ''
+    operator = '+'
 })
