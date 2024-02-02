@@ -130,33 +130,59 @@ dot.addEventListener('click', function onClick() {
     
 })
 
-let operator = '+'
+let operator = ''
 let result = ''
 
 sum.addEventListener('click', function onClick() {
     scream.innerText += '+'
-    firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
-    operator = '+'
-    secondNumber = ''
+    if (operator == '') {
+        operator = '+'
+    }
+    if(firstNumber !== '' & secondNumber !== '') {
+        firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
+        secondNumber = '';
+        operator = '+'
+        console.log(firstNumber)
+    }
 })
 subt.addEventListener('click', function onClick() {
     scream.innerText += '-'
-    firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
-    operator = '-'
-    secondNumber = ''
+    if(operator == '') {
+        operator = '-'
+    }
+    if(firstNumber !== '' & secondNumber !== '') {
+        firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
+        secondNumber = '';
+        operator = '-'
+        console.log(firstNumber)
+    }
 })
 mult.addEventListener('click', function onClick() {
     scream.innerText += '*'
-    firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
-    operator = '*'
-    secondNumber = ''
+    if(operator == '') {
+        operator = '*'
+    }
+    if(firstNumber !== '' & secondNumber !== '') {
+        firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
+        secondNumber = '';
+        operator = '*'
+        console.log(firstNumber)
+    }
 })
 div.addEventListener('click', function onClick() {
     scream.innerText += '/'
-    firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
-    operator = '/'
-    secondNumber = ''
+    if(operator == '') {
+        operator = '/'
+    }
+    if(firstNumber !== '' & secondNumber !== '') {
+        firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
+        secondNumber = '';
+        operator = '/'
+        console.log(firstNumber)
+    }
 })
+
+// 12 + 7 - 5 * 3 = 42
 
 function operate(operator, a, b) {
     a = Number(a)
@@ -180,6 +206,7 @@ clear.addEventListener('click', function onClick() {
     scream.innerText = ''
     firstNumber = ''
     secondNumber = ''
+    operator = ''
 })
 
 equal.addEventListener('click', function onClick() {
@@ -188,5 +215,5 @@ equal.addEventListener('click', function onClick() {
     firstNumber = result;
     console.log(firstNumber,secondNumber,operator, result);
     secondNumber = ''
-    operator = '+'
+    operator = ''
 })
