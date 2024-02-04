@@ -44,7 +44,7 @@ let secondNumber = ''
 one.addEventListener('click', function onClick() {
     scream.innerText += '1'
     if (operator == '') {
-        return firstNumber += '1'
+        return firstNumber += Number('1')
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '1'
     
 })
@@ -209,8 +209,22 @@ clear.addEventListener('click', function onClick() {
     operator = ''
 })
 
+del.addEventListener('click', function onClick() {
+    scream.innerText = scream.innerText.slice(0, -1)
+    if(firstNumber !== '' & operator == '') {
+        firstNumber = firstNumber.slice(0, -1)
+    } else if (operator !== '' & secondNumber == '') {
+        operator = ''
+    } else {
+        secondNumber = secondNumber.slice(0, -1)
+    }
+
+    
+    
+})
+
 equal.addEventListener('click', function onClick() {
-    result = operate(operator, Number(firstNumber), Number(secondNumber));
+    result = String(operate(operator, Number(firstNumber), Number(secondNumber)));
     scream.innerText = result;
     firstNumber = result;
     console.log(firstNumber,secondNumber,operator, result);
