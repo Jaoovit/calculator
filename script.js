@@ -134,7 +134,15 @@ let operator = ''
 let result = ''
 
 sum.addEventListener('click', function onClick() {
-    scream.innerText += '+'
+    
+    if(firstNumber != '' & operator != '' & secondNumber == '') {
+        scream.innerText = scream.innerText.slice(0, -1)
+        scream.innerText += '+'
+        operator = '+'
+    }else {
+        scream.innerText += '+'
+    }
+    
     if (operator == '') {
         operator = '+'
     }
@@ -146,7 +154,15 @@ sum.addEventListener('click', function onClick() {
     }
 })
 subt.addEventListener('click', function onClick() {
-    scream.innerText += '-'
+    
+    if(firstNumber != '' & operator != '' & secondNumber == '') {
+        scream.innerText = scream.innerText.slice(0, -1)
+        scream.innerText += '-'
+        operator = '-'
+    }else {
+        scream.innerText += '-'
+    }
+
     if(operator == '') {
         operator = '-'
     }
@@ -158,7 +174,16 @@ subt.addEventListener('click', function onClick() {
     }
 })
 mult.addEventListener('click', function onClick() {
-    scream.innerText += '*'
+    
+    if(firstNumber != '' & operator != '' & secondNumber == '') {
+        scream.innerText = scream.innerText.slice(0, -1)
+        scream.innerText += '*'
+        operator = '*'
+    }else {
+        scream.innerText += '*'
+    }
+
+
     if(operator == '') {
         operator = '*'
     }
@@ -170,7 +195,15 @@ mult.addEventListener('click', function onClick() {
     }
 })
 div.addEventListener('click', function onClick() {
-    scream.innerText += '/'
+    
+    if(firstNumber != '' & operator != '' & secondNumber == '') {
+        scream.innerText = scream.innerText.slice(0, -1)
+        scream.innerText += '/'
+        operator = '/'
+    }else {
+        scream.innerText += '/'
+    }
+
     if(operator == '') {
         operator = '/'
     }
@@ -214,7 +247,8 @@ del.addEventListener('click', function onClick() {
     if(firstNumber !== '' & operator == '') {
         firstNumber = firstNumber.slice(0, -1)
     } else if (operator !== '' & secondNumber == '') {
-        operator = ''
+        operator = operator.slice(0, -1)
+        console.log(operator)
     } else {
         secondNumber = secondNumber.slice(0, -1)
     }
