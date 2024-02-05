@@ -10,7 +10,7 @@ const nine = document.querySelector('#nine')
 const dot = document.querySelector('#dot')
 const zero = document.querySelector('#zero')
 
-const scream = document.querySelector('#scream')
+const screen = document.querySelector('#screen')
 
 const clear = document.querySelector('#clear')
 const del = document.querySelector('#delete')
@@ -42,7 +42,7 @@ let firstNumber = ''
 let secondNumber = ''
 
 one.addEventListener('click', function onClick() {
-    scream.innerText += '1'
+    screen.innerText += '1'
     if (operator == '') {
         return firstNumber += Number('1')
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '1'
@@ -50,7 +50,7 @@ one.addEventListener('click', function onClick() {
 })
 
 two.addEventListener('click', function onClick() {
-    scream.innerText += '2'
+    screen.innerText += '2'
     if (operator == '') {
         return firstNumber += '2'
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '2'
@@ -58,7 +58,7 @@ two.addEventListener('click', function onClick() {
 })
 
 three.addEventListener('click', function onClick() {
-    scream.innerText += '3'
+    screen.innerText += '3'
     if (operator == '') {
         return firstNumber += '3'
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '3'
@@ -66,7 +66,7 @@ three.addEventListener('click', function onClick() {
 })
 
 four.addEventListener('click', function onClick() {
-    scream.innerText += '4'
+    screen.innerText += '4'
     if (operator == '') {
         return firstNumber += '4'
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '4'
@@ -74,7 +74,7 @@ four.addEventListener('click', function onClick() {
 })
 
 five.addEventListener('click', function onClick() {
-    scream.innerText += '5'
+    screen.innerText += '5'
     if (operator == '') {
         return firstNumber += '5'
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '5'
@@ -82,7 +82,7 @@ five.addEventListener('click', function onClick() {
 })
 
 six.addEventListener('click', function onClick() {
-    scream.innerText += '6'
+    screen.innerText += '6'
     if (operator == '') {
         return firstNumber += '6'
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '6'
@@ -90,7 +90,7 @@ six.addEventListener('click', function onClick() {
 })
 
 seven.addEventListener('click', function onClick() {
-    scream.innerText += '7'
+    screen.innerText += '7'
     if (operator == '') {
         return firstNumber += '7'
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '7'
@@ -98,7 +98,7 @@ seven.addEventListener('click', function onClick() {
 })
 
 eight.addEventListener('click', function onClick() {
-    scream.innerText += '8'
+    screen.innerText += '8'
     if (operator == '') {
         return firstNumber += '8'
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '8'
@@ -106,7 +106,7 @@ eight.addEventListener('click', function onClick() {
 })
 
 nine.addEventListener('click', function onClick() {
-    scream.innerText += '9'
+    screen.innerText += '9'
     if (operator == '') {
         return firstNumber += '9'
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '9'
@@ -115,7 +115,7 @@ nine.addEventListener('click', function onClick() {
 
 
 zero.addEventListener('click', function onClick() {
-    scream.innerText += '0'
+    screen.innerText += '0'
     if (operator == '') {
         return firstNumber += '0'
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '0'
@@ -123,7 +123,7 @@ zero.addEventListener('click', function onClick() {
 })
 
 dot.addEventListener('click', function onClick() {
-    scream.innerText += '.'
+    screen.innerText += '.'
     if (operator == '') {
         return firstNumber += '.'
     } else if (operator == '+' || '-' || '*' || '/') return secondNumber += '.'
@@ -136,11 +136,11 @@ let result = ''
 sum.addEventListener('click', function onClick() {
     
     if(firstNumber != '' & operator != '' & secondNumber == '') {
-        scream.innerText = scream.innerText.slice(0, -1)
-        scream.innerText += '+'
+        screen.innerText = screen.innerText.slice(0, -1)
+        screen.innerText += '+'
         operator = '+'
     }else {
-        scream.innerText += '+'
+        screen.innerText += '+'
     }
     
     if (operator == '') {
@@ -150,19 +150,18 @@ sum.addEventListener('click', function onClick() {
         firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
         secondNumber = '';
         operator = '+'
-        scream.innerText = firstNumber
-        scream.innerText += '+'
-        console.log(firstNumber)
+        screen.innerText = firstNumber
+        screen.innerText += '+'
     }
 })
 subt.addEventListener('click', function onClick() {
     
     if(firstNumber != '' & operator != '' & secondNumber == '') {
-        scream.innerText = scream.innerText.slice(0, -1)
-        scream.innerText += '-'
+        screen.innerText = screen.innerText.slice(0, -1)
+        screen.innerText += '-'
         operator = '-'
     }else {
-        scream.innerText += '-'
+        screen.innerText += '-'
     }
 
     if(operator == '') {
@@ -172,19 +171,18 @@ subt.addEventListener('click', function onClick() {
         firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
         secondNumber = '';
         operator = '-'
-        scream.innerText = firstNumber
-        scream.innerText += '-'
-        console.log(firstNumber)
+        screen.innerText = firstNumber
+        screen.innerText += '-'
     }
 })
 mult.addEventListener('click', function onClick() {
     
     if(firstNumber != '' & operator != '' & secondNumber == '') {
-        scream.innerText = scream.innerText.slice(0, -1)
-        scream.innerText += '*'
+        screen.innerText = screen.innerText.slice(0, -1)
+        screen.innerText += '*'
         operator = '*'
     }else {
-        scream.innerText += '*'
+        screen.innerText += '*'
     }
 
 
@@ -195,19 +193,18 @@ mult.addEventListener('click', function onClick() {
         firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
         secondNumber = '';
         operator = '*'
-        scream.innerText = firstNumber
-        scream.innerText += '*'
-        console.log(firstNumber)
+        screen.innerText = firstNumber
+        screen.innerText += '*'
     }
 })
 div.addEventListener('click', function onClick() {
     
     if(firstNumber != '' & operator != '' & secondNumber == '') {
-        scream.innerText = scream.innerText.slice(0, -1)
-        scream.innerText += '/'
+        screen.innerText = screen.innerText.slice(0, -1)
+        screen.innerText += '/'
         operator = '/'
     }else {
-        scream.innerText += '/'
+        screen.innerText += '/'
     }
 
     if(operator == '') {
@@ -217,13 +214,10 @@ div.addEventListener('click', function onClick() {
         firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
         secondNumber = '';
         operator = '/'
-        scream.innerText = firstNumber
-        scream.innerText += '/'
-        console.log(firstNumber)
+        screen.innerText = firstNumber
+        screen.innerText += '/'
     }
 })
-
-// 12 + 7 - 5 * 3 = 42
 
 function operate(operator, a, b) {
     a = Number(a)
@@ -244,19 +238,18 @@ function operate(operator, a, b) {
 }
 
 clear.addEventListener('click', function onClick() {
-    scream.innerText = ''
+    screen.innerText = ''
     firstNumber = ''
     secondNumber = ''
     operator = ''
 })
 
 del.addEventListener('click', function onClick() {
-    scream.innerText = scream.innerText.slice(0, -1)
+    screen.innerText = screen.innerText.slice(0, -1)
     if(firstNumber !== '' & operator == '') {
         firstNumber = firstNumber.slice(0, -1)
     } else if (operator !== '' & secondNumber == '') {
         operator = operator.slice(0, -1)
-        console.log(operator)
     } else {
         secondNumber = secondNumber.slice(0, -1)
     }
@@ -267,9 +260,8 @@ del.addEventListener('click', function onClick() {
 
 equal.addEventListener('click', function onClick() {
     result = String(operate(operator, Number(firstNumber), Number(secondNumber)));
-    scream.innerText = result;
+    screen.innerText = result;
     firstNumber = result;
-    console.log(firstNumber,secondNumber,operator, result);
     secondNumber = ''
     operator = ''
 })
