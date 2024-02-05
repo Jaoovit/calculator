@@ -150,6 +150,8 @@ sum.addEventListener('click', function onClick() {
         firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
         secondNumber = '';
         operator = '+'
+        scream.innerText = firstNumber
+        scream.innerText += '+'
         console.log(firstNumber)
     }
 })
@@ -170,6 +172,8 @@ subt.addEventListener('click', function onClick() {
         firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
         secondNumber = '';
         operator = '-'
+        scream.innerText = firstNumber
+        scream.innerText += '-'
         console.log(firstNumber)
     }
 })
@@ -191,6 +195,8 @@ mult.addEventListener('click', function onClick() {
         firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
         secondNumber = '';
         operator = '*'
+        scream.innerText = firstNumber
+        scream.innerText += '*'
         console.log(firstNumber)
     }
 })
@@ -211,6 +217,8 @@ div.addEventListener('click', function onClick() {
         firstNumber = operate(operator, Number(firstNumber), Number(secondNumber));
         secondNumber = '';
         operator = '/'
+        scream.innerText = firstNumber
+        scream.innerText += '/'
         console.log(firstNumber)
     }
 })
